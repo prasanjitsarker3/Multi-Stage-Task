@@ -7,19 +7,30 @@ The Multi-Stage-Server application collects user data through a three-step proce
 ### Installation
 
 1. **Clone the Repository**
-   git clone https://github.com/yourusername/multi-stage-server.git
+
+```js
+   git clone https://github.com/prasanjitsarker3/Multi-Stage-Task
    cd multi-stage-server
+```
 
 2. **Install Dependencies**
+
+   ```js
    npm install
+   ```
 
 3. **Set Up Environment Variables**
    Create a `.env` file in the root directory and add the following:
-   MONGODB_URI=mongodb://localhost:27017/multi-stage-db
-   PORT=5000
 
-4. **Run the Application**
-   npm start
+```js
+ MONGODB_URI=mongodb://localhost:27017/multi-stage-db
+ PORT=5000
+```
+
+4. **To start the server in development mode with TypeScript, use:**
+   ```js
+   npm run startDev
+   ```
 
 ### Technologies Used
 
@@ -34,6 +45,8 @@ The Multi-Stage-Server application collects user data through a three-step proce
 #### Create User Data
 
 To create user data, send a `POST` request to `/api/v1/post/create` with the following JSON body:
+
+```js
 {
 "fullName": "John Doe",
 "dob": "1990-01-01",
@@ -48,15 +61,11 @@ To create user data, send a `POST` request to `/api/v1/post/create` with the fol
 "emergencyContact": "Jane Doe",
 "medicalConditions": "None"
 }
+```
 
 ## Get All Data
 
 To retrieve all users, send a GET request to `/api/v1/post`.
-
-## Development
-
-To start the server in development mode with TypeScript, use:
-npm run startDev
 
 ## Acknowledgements
 
@@ -64,5 +73,7 @@ Node.js, Express, Mongoose, TypeScript, Zod, CORS, Dotenv
 
 Summary
 This setup provides a complete MVC pattern implementation for user data collection in a Node.js application using Express and MongoDB. It includes validation using express-validator and organizes the code into separate modules for models, controllers, services, routes, and validation utilities, ensuring a clear and maintainable structure.
+
+# Link
 
 Github Link: https://github.com/prasanjitsarker3/Multi-Stage-Task
